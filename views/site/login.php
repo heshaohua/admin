@@ -25,7 +25,7 @@ use \yii\captcha\Captcha;
         <label class="layui-icon layui-icon-password admin-icon-password" for="loginform-password"></label>
         <?= $form->field($model, 'password')->passwordInput(['class'=>'layui-input admin-password-input','placeholder'=>'密码：123456']) ?>
         <label class="layui-icon layui-icon-vercode admin-icon-captcha" for="loginform-verifycode"></label>
-        <?php echo $form->field($model, 'verifyCode')->widget(Captcha::className(), [
+        <?php echo $form->field($model, 'verifyCode')->widget(Captcha::class, [
             'captchaAction' => 'site/captcha',
             'options' => [
                 'class' => 'layui-input admin-input-captcha',
